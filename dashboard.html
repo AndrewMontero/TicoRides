@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        #lista-rides {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #form-ride {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #form-ride label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #form-ride input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #form-ride button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #form-ride button:hover {
+            background-color: #0056b3;
+        }
+
+        #rides-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Dashboard</h1>
+<ul id="lista-rides">
+    <!-- Aquí se listarán los Rides del usuario -->
+</ul>
+<form id="form-ride">
+    <label for="origen">Origen:</label>
+    <input type="text" id="origen" name="origen" required><br>
+    <label for="destino">Destino:</label>
+    <input type="text" id="destino" name="destino" required><br>
+    <button type="button" onclick="agregarRide()">Guardar Ride</button>
+</form>
+
+<div id="rides-container">
+    <h2>Rides Agregados</h2>
+    <ul id="rides-list">
+        <!-- Aquí se mostrarán los datos agregados -->
+    </ul>
+</div>
+
+<script>
+    function agregarRide() {
+        var origen = document.getElementById('origen').value;
+        var destino = document.getElementById('destino').value;
+
+        if (origen && destino) {
+            var ridesList = document.getElementById('rides-list');
+            var listItem = document.createElement('li');
+            listItem.textContent = 'Origen: ' + origen + ', Destino: ' + destino;
+            ridesList.appendChild(listItem);
+
+            // Limpiar los campos de entrada después de agregar el ride
+            document.getElementById('origen').value = '';
+            document.getElementById('destino').value = '';
+        } else {
+            alert('Por favor completa todos los campos.');
+        }
+    }
+</script>
+
+</body>
+</html>
