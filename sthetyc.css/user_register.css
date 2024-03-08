@@ -4,6 +4,10 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/522/847/desktop-wallpaper-retrowave-car-cars-3840x2160-for-your-mobile-tablet-car-vintage.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
 }
 
 h1 {
@@ -11,20 +15,21 @@ h1 {
     margin-top: 20px;
 }
 
-/* Estilos para el formulario */
 form {
     max-width: 400px;
     margin: 20px auto;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgb(255, 255, 255);
+    color: #fff; 
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #fff; 
 }
 
 input {
@@ -50,19 +55,17 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para la imagen del carro */
 .car-image {
     display: block;
     margin: 20px auto;
     max-width: 200px;
 }
 
-/* Estilos para el enlace de inicio de sesión */
 a {
     display: block;
     text-align: center;
     margin-top: 10px;
-    color: #333;
+    color: #fff; 
     text-decoration: none;
     font-size: 14px;
 }
