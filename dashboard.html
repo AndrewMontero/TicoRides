@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="sthetyc.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/723/57/desktop-wallpaper-world-map-in-high-definition-copy-world-map-hi-as-very-high-resolution-of-world-map.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_dashboard.css">
+    <title>Tico Rides</title>
 </head>
+
 <body>
-
-<h1>TicoRider</h1>
-<ul id="lista-rides">
-   
-</ul>
-<form id="form-ride">
-    <label for="origen">Origen:</label>
-    <input type="text" id="origen" name="origen" required><br>
-    <label for="destino">Destino:</label>
-    <input type="text" id="destino" name="destino" required><br>
-    <button type="button" onclick="agregarRide()">Guardar Ride</button>
-</form>
-
-<div id="rides-container">
-    <h2>Rides Agregados</h2>
-    <ul id="rides-list">
-      
-    </ul>
-</div>
-
-<script>
-    function agregarRide() {
-        var origen = document.getElementById('origen').value;
-        var destino = document.getElementById('destino').value;
-
-        if (origen && destino) {
-            var ridesList = document.getElementById('rides-list');
-            var listItem = document.createElement('li');
-            listItem.textContent = 'Origen: ' + origen + ', Destino: ' + destino;
-            ridesList.appendChild(listItem);
-
-          
-            document.getElementById('origen').value = '';
-            document.getElementById('destino').value = '';
-        } else {
-            alert('Por favor completa todos los campos.');
-        }
-    }
-</script>
-
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="logo.png" class="img" alt="Fines Ilustrativos">
+                        <div class="row justify-content-center mt-3">
+                            <div class="col">
+                                <a href="#" class="btn btn-primary btn-block">Dashboard</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-primary btn-block">Rides</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-primary btn-block">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Dashboard</h2>
+                        <h4 class="card-title">My Rides</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Brete</td>
+                                        <td>Barrio Los Angeles</td>
+                                        <td>Ciudad Quesada</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Casa</td>
+                                        <td>Ciudad Quesada</td>
+                                        <td>Los Angeles</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oficina Chepe</td>
+                                        <td>Ciudad Quesada</td>
+                                        <td>San Pedro</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

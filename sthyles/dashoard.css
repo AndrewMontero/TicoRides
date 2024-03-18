@@ -1,59 +1,45 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/723/57/desktop-wallpaper-world-map-in-high-definition-copy-world-map-hi-as-very-high-resolution-of-world-map.jpg');
-    background-size: cover;
-    background-position: center;
+.img {
+    margin-top: 1%;
+    margin-left: 10%;
+    width: 25%;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
+.title {
+    margin-left: 3%;
+    margin-top: 2%;
 }
 
-#lista-rides {
-    list-style-type: none;
-    padding: 0;
+.container {
+    margin-top: 2%;
 }
 
-#form-ride {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.table {
+    margin-top: 50%;
+    width: 80%;
+    margin: auto;
+}
+
+.buttonmain {
+    color: black;
+}
+
+.row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Agrega una línea horizontal debajo de cada fila */
 }
 
-#form-ride label {
-    display: block;
-    margin-bottom: 5px;
+.col {
+    width: 25%;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Agrega una línea vertical a la derecha de cada columna */
 }
 
-#form-ride input[type="text"] {
-    width: calc(100% - 10px);
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.card {
+    border-radius: 10px;
 }
 
-#form-ride button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#form-ride button:hover {
-    background-color: #0056b3;
+.col:last-child {
+    border-right: none; /* Elimina la línea vertical de la última columna */
 }

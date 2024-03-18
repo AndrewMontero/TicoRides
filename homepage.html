@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TicoRides.com - Search for a Ride</title>
+    <link rel="stylesheet" href="sthyles/homepage.css">
+    <style>
+        /* Estilos adicionales para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Colapsar los bordes de las celdas */
+            margin-top: 20px; /* Espacio superior */
+        }
+        
+        th, td {
+            border: 1px solid #ddd; /* Borde de las celdas */
+            padding: 8px; /* Espaciado interno */
+            text-align: left; /* Alineación del texto */
+        }
+        
+        th {
+            background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
+        }
+    </style>
+</head>
+<body>
+    <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
+    <h1>Welcome to TicoRides.com</h1>
+    <h2>Search for a Ride</h2>
+    <form action="/search" method="get">
+        <label for="start">From:</label>
+        <input type="text" id="start" name="start">
+        <label for="end">To:</label>
+        <input type="text" id="end" name="end">
+        <input type="submit" value="Find My Ride!">
+    </form>
+    <h2>Results for Rides that match your criteria:</h2>
+
+    <!-- Tabla mejorada -->
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andrews</td>
+                <td>Villa Maria</td>
+                <td>La Palmera</td>
+            </tr>
+            <tr>
+                <td>barroyo</td>
+                <td>Ciudad Quesada</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>yluna</td>
+                <td>Ciudad Quesada</td>
+                <td>San Pedro</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botón de login con redireccionamiento -->
+    <a href="login.html" id="login-button">Login</a>
+</body>
+</html>

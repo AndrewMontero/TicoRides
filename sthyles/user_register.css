@@ -1,6 +1,13 @@
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
+
+}
+
+.img {
+  margin-top: 5%;
+  margin-left: 35%;
+  width: 25%;
 }
 
 #registrationForm {
@@ -8,10 +15,9 @@ body {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background: url('images/logo.png') no-repeat center top; /* Ruta actualizada para la carpeta 'images' */
-  background-size: contain; /* Para ajustar el tamaño de la imagen */
+  background-size: contain;
   border-radius: 8px;
-  position: relative; /* Para posicionar el contenido del formulario encima de la imagen */
+  position: relative;
 }
 
 #registrationForm label {
@@ -25,7 +31,7 @@ body {
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  display: block; /* Cambio para que los inputs vayan verticalmente */
+  display: block;
 }
 
 #registrationForm button {
@@ -41,10 +47,4 @@ body {
 
 #registrationForm button:hover {
   background-color: #4cae4c;
-}
-
-.login-image {
-  height: 80px; /* Ajuste de altura */
-  margin-bottom: 20px;
-  width: auto; /* Ancho automático para mantener la proporción */
 }

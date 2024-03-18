@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    max-width: 500px; /* Aumenta el ancho máximo del formulario */
+    margin: 20px auto;
+    padding: 40px; /* Aumenta el espacio interno */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #313633;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+    color: #16a085;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de login generado con CSS */
+#login-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el contenedor blanco */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 40px; /* Aumenta el espacio interno */
+    max-width: 500px; /* Ajusta el ancho máximo del formulario */
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Estilos adicionales para la tabla de resultados */
+.resultados {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.resultados p {
+    margin: 10px 0; /* Espacio entre cada resultado */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Color de fondo para resaltar los resultados */
+    border: 1px solid #ddd; /* Borde alrededor de cada resultado */
+}
+
+.resultados p:first-child {
+    margin-top: 0; /* Elimina el margen superior del primer resultado */
+}
+
+.resultados p:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último resultado */
+}
+
+.resultados p strong {
+    color: #2c3e50; /* Color del texto en negrita */
+}
+
+.resultados p:nth-child(even) {
+    background-color: #f0f0f0; /* Color de fondo alternativo para resaltar los resultados */
+}
