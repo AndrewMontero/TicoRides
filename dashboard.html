@@ -10,67 +10,81 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
             <div class="col-md-8">
+                <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
                 <div class="card">
-                    <div class="card-header">
-                        <img src="logo.png" class="img" alt="Fines Ilustrativos">
-                        <div class="row justify-content-center mt-3">
-                            <div class="col">
-                                <a href="#" class="btn btn-primary btn-block">Dashboard</a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="btn btn-primary btn-block">Rides</a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="btn btn-primary btn-block">Settings</a>
-                            </div>
+                    <div class="row align-items-start ml-1">
+                        <div class="col">
+                            <a href="dashboard.html" class="buttonmain">Dashboard</a>
+                        </div>
+                        <div class="col">
+                            <a href="homepage.html" class="buttonmain">Rides</a>
+                        </div>
+                        <div class="col">
+                            <a href="settings.html" class="buttonmain">Settings</a>
                         </div>
                     </div>
+                </div>
+                <div class="welcome-user">
+                    <span>Welcome</span>
+                    <a class="username" href="#">barroyo</a>
+                    <img src="images/user.png" class="img" alt="user-logo">
+                    <h2 class="title">Dashboard</h2>
+                </div>
+
+                <div class="dashboard-link">
+                    <a href="#">Dashboard</a>
+                    <span class="arrow">&gt;</span>
+                </div>
+
+                <p class="title">My Rides</p>
+                <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Dashboard</h2>
-                        <h4 class="card-title">My Rides</h4>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Start</th>
-                                        <th>End</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Brete</td>
-                                        <td>Barrio Los Angeles</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Casa</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>Los Angeles</td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oficina Chepe</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>San Pedro</td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <p class="title">Your current list of Rides</p>
+                        <div class="buttonplus" onclick="location.href='add.html'">
+                            <div class="plus horizontal"></div>
+                            <div class="plus vertical"></div>
+                        </div>
+                        <div class="table">
+                            <div class="row align-items-start ml-3">
+                                <div class="col">Name</div>
+                                <div class="col">Start</div>
+                                <div class="col">End</div>
+                                <div class="col">Actions</div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">Brete</div>
+                                <div class="col">Barrio Los Angeles</div>
+                                <div class="col">Ciudad Quesada</div>
+                                <div class="col">
+                                    <a href="#" class="button">Edit -</a>
+                                    <a href="#" class="button">Delete</a>
+                                </div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">Casa</div>
+                                <div class="col">Ciudad Quesada</div>
+                                <div class="col">Los Angeles</div>
+                                <div class="col">
+                                    <a href="#" class="button">Edit -</a>
+                                    <a href="#" class="button">Delete</a>
+                                </div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">Oficina Chepe</div>
+                                <div class="col">Ciudad Quesada</div>
+                                <div class="col">San Pedro</div>
+                                <div class="col">
+                                    <a href="#" class="button">Edit -</a>
+                                    <a href="#" class="button">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttonplus2" onclick="location.href='add.html'">
+                            <div class="plus horizontal"></div>
+                            <div class="plus vertical"></div>
                         </div>
                     </div>
                 </div>
