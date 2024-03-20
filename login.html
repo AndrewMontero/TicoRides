@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="sthyles/login.css">
 </head>
 
@@ -18,9 +18,9 @@
             <input type="email" id="email_login" name="email_login" required><br>
             <label for="password_login">Contraseña:</label>
             <input type="password" id="password_login" name="password_login" required><br>
-            <button type="submit">LOGIN</button> <!-- Cambio de texto del botón -->
+            <button type="submit">INICIAR SESIÓN</button> <!-- Changed button text -->
         </form>
-        <p>¿No tienes una cuenta? <a href="user_register.html">Registrarse aquí</a></p> <!-- Enlace para dirigir al segundo código -->
+        <p>¿No tienes una cuenta? <a href="user_register.html">Registrarse aquí</a></p> <!-- Link to redirect to the second code -->
     </div>
 
     <script>
@@ -28,22 +28,22 @@
             var email = document.getElementById("email_login").value;
             var password = document.getElementById("password_login").value;
 
-            // Expresión regular para validar el formato de correo electrónico
+            // Regular expression to validate email format
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            // Verifica si el correo electrónico cumple con el formato válido
+            // Check if email matches the valid format
             if (!emailRegex.test(email)) {
-                alert("Por favor, ingrese un correo electrónico válido.");
-                return false; // Evita el envío del formulario
+                alert("Please enter a valid email.");
+                return false; // Prevent form submission
             }
 
-            // Verifica si la contraseña tiene al menos 8 caracteres
+            // Check if password has at least 8 characters
             if (password.length < 8) {
-                alert("La contraseña debe tener al menos 8 caracteres.");
-                return false; // Evita el envío del formulario
+                alert("Password must be at least 8 characters long.");
+                return false; // Prevent form submission
             }
 
-            // Si todas las validaciones pasan, se envía el formulario
+            // If all validations pass, submit the form
             return true;
         }
     </script>

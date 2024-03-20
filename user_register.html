@@ -1,65 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Registro</title>
+  <title>Registration Form</title>
   <link rel="stylesheet" href="sthyles/user_register.css">
 </head>
 
 <body>
-  <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
+  <img src="images/logo.png" class="img" alt="Illustrative Purposes">
   <div>
+    <!-- The form is submitted to the validateForm() function when submitted -->
     <form id="registrationForm" onsubmit="return validateForm()">
       <div class="login-image"></div>
-      <label for="firstName">Nombre</label>
+      <!-- Label and input field for first name -->
+      <label for="firstName">First Name</label>
       <input type="text" id="firstName" name="firstName" required>
 
-      <label for="lastName">Apellido</label>
+      <!-- Label and input field for last name -->
+      <label for="lastName">Last Name</label>
       <input type="text" id="lastName" name="lastName" required>
 
-      <label for="email">Correo Electrónico</label>
+      <!-- Label and input field for email -->
+      <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="password">Contraseña</label>
+      <!-- Label and input field for password -->
+      <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
 
-      <label for="confirmPassword">Confirmar Contraseña</label>
+      <!-- Label and input field to confirm password -->
+      <label for="confirmPassword">Confirm Password</label>
       <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-      <button type="submit">Registrarse</button>
+      <!-- Submit button for form -->
+      <button type="submit">Register</button>
     </form>
   </div>
 
+  <!-- JavaScript script to validate the form -->
   <script>
     function validateForm() {
+      // Get the values of form fields
       var firstName = document.getElementById("firstName").value;
       var lastName = document.getElementById("lastName").value;
       var email = document.getElementById("email").value;
       var password = document.getElementById("password").value;
       var confirmPassword = document.getElementById("confirmPassword").value;
 
-      // Validar que los campos no estén vacíos
+      // Validate that all fields are not empty
       if (firstName == "" || lastName == "" || email == "" || password == "" || confirmPassword == "") {
-        alert("Por favor, complete todos los campos.");
-        return false;
+        alert("Please fill in all fields.");
+        return false; // Prevent form submission
       }
 
-      // Validar que la contraseña y su confirmación coincidan
+      // Validate that password and confirm password match
       if (password != confirmPassword) {
-        alert("Las contraseñas no coinciden.");
-        return false;
+        alert("Passwords do not match.");
+        return false; // Prevent form submission
       }
 
-      // Validar el formato del correo electrónico
+      // Validate email format using a regular expression
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        alert("Por favor, introduzca un correo electrónico válido.");
-        return false;
+        alert("Please enter a valid email address.");
+        return false; // Prevent form submission
       }
 
-      // Si todo está bien, se puede enviar el formulario
+      // If all validations pass, allow form submission
       return true;
     }
   </script>

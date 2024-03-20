@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="ruta/a/tu/archivo/rides.css">
+    <link rel="stylesheet" href="sthyles/rides.css">
     <title>Tico Rides</title>
     <style>
-        /* Agrega estilos personalizados aquí si es necesario */
+        /* Add custom styles here if necessary */
     </style>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
+                <img src="images/logo.png" class="img" alt="Illustrative Purposes">
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
@@ -44,6 +44,7 @@
                 </div>
                 <div class="info">
                     <label for="ridename" class="form-label">Nombre del Viaje</label>
+                    <!-- Input field for the ride name -->
                     <input type="text" class="form-control" id="ridename" placeholder="Brete">
                     <label for="startfrom" class="form-label">Lugar de Salida</label>
                     <input type="text" class="form-control" id="startfrom" placeholder="Barrio Los Angeles, Ciudad Quesada">
@@ -87,8 +88,9 @@
     </div>
 
     <script>
+        // JavaScript function to allow only letters in the ride name input field
         document.getElementById("ridename").addEventListener("input", function() {
-            // Remueve caracteres que no sean letras
+            // Remove non-letter characters
             this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
         });
     </script>

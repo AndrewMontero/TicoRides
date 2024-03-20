@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* General styles */
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
@@ -12,7 +12,7 @@ body {
 }
 
 #registrationForm {
-  width: 90%; /* Ajusta el ancho del formulario para dispositivos más pequeños */
+  width: 90%;
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
@@ -50,9 +50,37 @@ body {
   background-color: #4cae4c;
 }
 
-/* Media queries para hacerlo responsive */
+/* Media queries for mobile devices */
 @media only screen and (max-width: 768px) {
   .img {
-    width: 50%; /* Ajusta el tamaño de la imagen para dispositivos más pequeños */
+    width: 50%;
+  }
+
+  #registrationForm {
+    width: 80%;
+    padding: 15px;
+  }
+}
+
+/* iPhone 12 */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  body {
+    font-size: 14px;
+  }
+
+  #registrationForm {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    font-size: 16px;
+  }
+
+  #registrationForm {
+    width: 50%;
   }
 }

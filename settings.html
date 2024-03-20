@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style_settings.css">
+    <link rel="stylesheet" href="styles/settings.css">
     <title>Tico Rides</title>
     <style>
-        /* Agrega estilos personalizados aquí si es necesario */
+        /* Add custom styles here if needed */
     </style>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
+                <img src="images/logo.png" class="img" alt="Illustrative Purposes">
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
@@ -33,7 +33,7 @@
                 <div class="welcome-user">
                     <span>Welcome</span>
                     <a href="#" class="username">barroyo</a>
-                    <img src="images/user.png" class="img" alt="user-logo">
+                    <img src="images/user.png" class="img" alt="User Logo">
                     <h2 class="title">Dashboard</h2>
                 </div>
                 <div class="dashboard-link">
@@ -41,16 +41,16 @@
                     <span class="arrow">> Settings</span>
                 </div>
                 <div class="info">
-                    <label for="fullname" class="form-label">Nombre Completo</label>
+                    <label for="fullname" class="form-label">Full Name</label>
                     <input type="text" class="form-control" id="fullname" placeholder="Bladimir Barroyo">
-                    <label for="speedAverage" class="form-label">Velocidad Media</label>
+                    <label for="speedAverage" class="form-label">Average Speed</label>
                     <input type="text" class="form-control" id="speedAverage" placeholder="60 km/h">
-                    <label for="aboutMe" class="form-label">Sobre mí</label>
+                    <label for="aboutMe" class="form-label">About Me</label>
                     <div class="about-me">
-                        <textarea id="aboutMe" placeholder="Algo sobre mi va aqui"></textarea>
+                        <textarea id="aboutMe" placeholder="Something about me goes here"></textarea>
                         <div class="buttons">
-                            <a href="dashboard.html">Cancelar</a>
-                            <button class="save" onclick="validateForm()">Guardar</button>
+                            <a href="dashboard.html">Cancel</a>
+                            <button class="save" onclick="validateForm()">Save</button>
                         </div>
                     </div>
                 </div>
@@ -64,28 +64,28 @@
             var speedAverage = document.getElementById("speedAverage").value;
             var aboutMe = document.getElementById("aboutMe").value;
 
-            // Expresión regular para permitir solo letras
+            // Regular expression to allow only letters
             var lettersOnly = /^[A-Za-z]+$/;
 
             if (fullname.trim() === "") {
-                alert("Por favor, ingresa tu nombre completo.");
+                alert("Please enter your full name.");
                 return false;
             } else if (!fullname.match(lettersOnly)) {
-                alert("El nombre solo puede contener letras.");
+                alert("Name can only contain letters.");
                 return false;
             }
 
             if (speedAverage.trim() === "") {
-                alert("Por favor, ingresa tu velocidad media.");
+                alert("Please enter your average speed.");
                 return false;
             }
 
             if (aboutMe.trim() === "") {
-                alert("Por favor, ingresa algo sobre ti.");
+                alert("Please enter something about yourself.");
                 return false;
             }
 
-            // Si todas las validaciones pasan, se puede enviar el formulario
+            // If all validations pass, the form can be submitted
             return true;
         }
     </script>
