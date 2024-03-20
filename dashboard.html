@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style_dashboard.css">
+    <link rel="stylesheet" href="ruta/a/tu/archivo/style_dashboard.css">
     <title>Tico Rides</title>
 </head>
 
@@ -47,40 +47,29 @@
                             <div class="plus horizontal"></div>
                             <div class="plus vertical"></div>
                         </div>
-                        <div class="table">
-                            <div class="row align-items-start ml-3">
-                                <div class="col">Name</div>
-                                <div class="col">Start</div>
-                                <div class="col">End</div>
-                                <div class="col">Actions</div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">Brete</div>
-                                <div class="col">Barrio Los Angeles</div>
-                                <div class="col">Ciudad Quesada</div>
-                                <div class="col">
-                                    <a href="#" class="button">Edit -</a>
-                                    <a href="#" class="button">Delete</a>
-                                </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">Casa</div>
-                                <div class="col">Ciudad Quesada</div>
-                                <div class="col">Los Angeles</div>
-                                <div class="col">
-                                    <a href="#" class="button">Edit -</a>
-                                    <a href="#" class="button">Delete</a>
-                                </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">Oficina Chepe</div>
-                                <div class="col">Ciudad Quesada</div>
-                                <div class="col">San Pedro</div>
-                                <div class="col">
-                                    <a href="#" class="button">Edit -</a>
-                                    <a href="#" class="button">Delete</a>
-                                </div>
-                            </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Brete</td>
+                                        <td>Barrio Los Angeles</td>
+                                        <td>Ciudad Quesada</td>
+                                        <td>
+                                            <a href="#" class="button">Edit -</a>
+                                            <a href="#" class="button">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <!-- Aquí van los otros elementos de la tabla -->
+                                </tbody>
+                            </table>
                         </div>
                         <div class="buttonplus2" onclick="location.href='add.html'">
                             <div class="plus horizontal"></div>
@@ -91,6 +80,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Ejemplo de validación para el campo "Name"
+        function validateName() {
+            var nameInput = document.getElementById("nameInput").value;
+            if (nameInput.trim() === "") {
+                alert("Please enter a name.");
+                return false; // Evita la acción predeterminada (por ejemplo, la navegación a add.html)
+            }
+            return true; // Continúa con la acción predeterminada si el campo está completo
+        }
+    </script>
 </body>
 
 </html>

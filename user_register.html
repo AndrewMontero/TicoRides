@@ -11,7 +11,7 @@
 <body>
   <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
   <div>
-    <form id="registrationForm">
+    <form id="registrationForm" onsubmit="return validateForm()">
       <div class="login-image"></div>
       <label for="firstName">Nombre</label>
       <input type="text" id="firstName" name="firstName" required>
@@ -31,6 +31,38 @@
       <button type="submit">Registrarse</button>
     </form>
   </div>
+
+  <script>
+    function validateForm() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      // Validar que los campos no estén vacíos
+      if (firstName == "" || lastName == "" || email == "" || password == "" || confirmPassword == "") {
+        alert("Por favor, complete todos los campos.");
+        return false;
+      }
+
+      // Validar que la contraseña y su confirmación coincidan
+      if (password != confirmPassword) {
+        alert("Las contraseñas no coinciden.");
+        return false;
+      }
+
+      // Validar el formato del correo electrónico
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Por favor, introduzca un correo electrónico válido.");
+        return false;
+      }
+
+      // Si todo está bien, se puede enviar el formulario
+      return true;
+    }
+  </script>
 </body>
 
 </html>

@@ -7,6 +7,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style_settings.css">
     <title>Tico Rides</title>
+    <style>
+        /* Agrega estilos personalizados aquí si es necesario */
+    </style>
 </head>
 
 <body>
@@ -47,13 +50,45 @@
                         <textarea id="aboutMe" placeholder="Algo sobre mi va aqui"></textarea>
                         <div class="buttons">
                             <a href="dashboard.html">Cancelar</a>
-                            <button class="save">Guardar</button>
+                            <button class="save" onclick="validateForm()">Guardar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function validateForm() {
+            var fullname = document.getElementById("fullname").value;
+            var speedAverage = document.getElementById("speedAverage").value;
+            var aboutMe = document.getElementById("aboutMe").value;
+
+            // Expresión regular para permitir solo letras
+            var lettersOnly = /^[A-Za-z]+$/;
+
+            if (fullname.trim() === "") {
+                alert("Por favor, ingresa tu nombre completo.");
+                return false;
+            } else if (!fullname.match(lettersOnly)) {
+                alert("El nombre solo puede contener letras.");
+                return false;
+            }
+
+            if (speedAverage.trim() === "") {
+                alert("Por favor, ingresa tu velocidad media.");
+                return false;
+            }
+
+            if (aboutMe.trim() === "") {
+                alert("Por favor, ingresa algo sobre ti.");
+                return false;
+            }
+
+            // Si todas las validaciones pasan, se puede enviar el formulario
+            return true;
+        }
+    </script>
 </body>
 
 </html>

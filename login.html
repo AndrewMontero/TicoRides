@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="sthyles/login.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -16,7 +13,7 @@
 
     <div id="login-container">
         <h1>Iniciar Sesión</h1>
-        <form id="form-login" action="#" method="POST">
+        <form id="form-login" action="#" method="POST" onsubmit="return validateForm()">
             <label for="email_login">Email:</label>
             <input type="email" id="email_login" name="email_login" required><br>
             <label for="password_login">Contraseña:</label>
@@ -26,6 +23,30 @@
         <p>¿No tienes una cuenta? <a href="user_register.html">Registrarse aquí</a></p> <!-- Enlace para dirigir al segundo código -->
     </div>
 
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email_login").value;
+            var password = document.getElementById("password_login").value;
+
+            // Expresión regular para validar el formato de correo electrónico
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Verifica si el correo electrónico cumple con el formato válido
+            if (!emailRegex.test(email)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                return false; // Evita el envío del formulario
+            }
+
+            // Verifica si la contraseña tiene al menos 8 caracteres
+            if (password.length < 8) {
+                alert("La contraseña debe tener al menos 8 caracteres.");
+                return false; // Evita el envío del formulario
+            }
+
+            // Si todas las validaciones pasan, se envía el formulario
+            return true;
+        }
+    </script>
 </body>
 
 </html>

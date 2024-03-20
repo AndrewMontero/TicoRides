@@ -1,32 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicoRides.com - Search for a Ride</title>
-    <link rel="stylesheet" href="sthyles/homepage.css">
-    <style>
-        /* Estilos adicionales para la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Colapsar los bordes de las celdas */
-            margin-top: 20px; /* Espacio superior */
-        }
-        
-        th, td {
-            border: 1px solid #ddd; /* Borde de las celdas */
-            padding: 8px; /* Espaciado interno */
-            text-align: left; /* Alineación del texto */
-        }
-        
-        th {
-            background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
-        }
-    </style>
+    <link rel="stylesheet" href="ruta/a/tu/archivo/homepage.css">
 </head>
 <body>
     <img src="images/logo.png" class="img" alt="Fines Ilustrativos">
     <h1>Welcome to TicoRides.com</h1>
     <h2>Search for a Ride</h2>
-    <form action="/search" method="get">
+    <form id="searchForm" action="/search" method="get" onsubmit="return validateForm()">
         <label for="start">From:</label>
         <input type="text" id="start" name="start">
         <label for="end">To:</label>
@@ -34,44 +18,34 @@
         <input type="submit" value="Find My Ride!">
     </form>
     <div class="box">
-        <span>Form</span> <!-- Texto "Form" -->
+        <span>Form</span>
         <input type="text" class="input-text" value="Input Text" onfocus="this.value=''">
-        <!-- Input text con borde -->
-        <span>To</span> <!-- Texto "To" -->
+        <span>To</span>
         <input type="text" class="input-text" value="Input Text" onfocus="this.value=''">
-        <button class="my-button">Find my Ride!</button> <!-- Botón "Find my Ride" -->
+        <button class="my-button">Find my Ride!</button>
     </div>
     <h2>Results for Rides that match your criteria:</h2>
 
-    <!-- Tabla mejorada -->
-    <table>
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Start</th>
-                <th>End</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Andrews</td>
-                <td>Villa Maria</td>
-                <td>La Palmera</td>
-            </tr>
-            <tr>
-                <td>barroyo</td>
-                <td>Ciudad Quesada</td>
-                <td>Los Angeles</td>
-            </tr>
-            <tr>
-                <td>yluna</td>
-                <td>Ciudad Quesada</td>
-                <td>San Pedro</td>
-            </tr>
-        </tbody>
-    </table>
+    <ul class="resultados">
+        <li><strong>User:</strong> Andrews | <strong>Start:</strong> Villa Maria | <strong>End:</strong> La Palmera</li>
+        <li><strong>User:</strong> barroyo | <strong>Start:</strong> Ciudad Quesada | <strong>End:</strong> Los Angeles</li>
+        <li><strong>User:</strong> yluna | <strong>Start:</strong> Ciudad Quesada | <strong>End:</strong> San Pedro</li>
+    </ul>
 
-    <!-- Botón de login con redireccionamiento -->
     <a href="login.html" id="login-button">Login</a>
+
+    <script>
+        function validateForm() {
+            var start = document.getElementById("start").value;
+            var end = document.getElementById("end").value;
+
+            if (start.trim() === "" || end.trim() === "") {
+                alert("Por favor, complete todos los campos.");
+                return false; // Evita el envío del formulario
+            }
+
+            return true; // Envía el formulario si todas las validaciones pasan
+        }
+    </script>
 </body>
 </html>
