@@ -32,20 +32,14 @@
     margin-left: 5px;
 }
 
-.welcome-user .user-icon {
-    margin-left: 5px;
-    width: 30px;
+.welcome-user img {
+    width: 30px; /* Reducir el tamaño de la imagen */
 }
 
 .welcome-user {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin-left: 70%;
-}
-
-.welcome-user .title {
-    margin-left: -235%;
-    margin-top: -10%;
+    font-size: 14px; /* Reducir el tamaño del texto de bienvenida */
+    margin-left: auto; /* Alinear a la derecha */
 }
 
 .welcome-user span {

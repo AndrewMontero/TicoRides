@@ -58,7 +58,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Media queries for iPhone 12 */
+
 @media only screen and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-min-device-pixel-ratio: 3) {
     /* Adjustments for iPhone 12 */
     #login-container {
@@ -66,12 +66,11 @@ button:hover {
         padding: 20px;
     }
 
-    /* Other specific adjustments for iPhone 12 */
 }
 
 /* Media queries for iPad Pro */
 @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Adjustments for iPad Pro */
+   
     body {
         justify-content: center; /* Center the login container on the screen */
     }
@@ -81,5 +80,4 @@ button:hover {
         padding: 40px;
     }
 
-    /* Other specific adjustments for iPad Pro */
 }

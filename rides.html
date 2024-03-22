@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="sthyles/rides.css">
+    <link rel="stylesheet" href="styles/rides.css">
     <title>Tico Rides</title>
-    <style>
-        /* Add custom styles here if necessary */
-    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="images/logo.png" class="img" alt="Illustrative Purposes">
+                <!-- Logo -->
+                <img src="images/logo.png" class="img" alt="Illustrative logo">
+                <!-- Navigation links -->
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
@@ -30,38 +29,42 @@
                         </div>
                     </div>
                 </div>
+                <!-- Welcome message -->
                 <div class="welcome-user">
                     <span>Welcome</span>
-                    <a href="#" class="username">barroyo</a>
+                    <a class="username" href="#" id="userLink"></a> <!-- Changed to update dynamically -->
                     <img src="images/user.png" class="img" alt="user-logo">
                     <h2 class="title">Dashboard</h2>
                 </div>
+                <!-- Dashboard links -->
                 <div class="dashboard-link">
                     <a href="#">Dashboard</a>
                     <span class="arrow">></span>
                     <a href="#">Rides</a>
                     <span class="arrow">> Edit</span>
                 </div>
+                <!-- Information section -->
                 <div class="info">
-                    <label for="ridename" class="form-label">Nombre del Viaje</label>
-                    <!-- Input field for the ride name -->
+                    <label for="ridename" class="form-label">Ride Name</label>
                     <input type="text" class="form-control" id="ridename" placeholder="Brete">
-                    <label for="startfrom" class="form-label">Lugar de Salida</label>
-                    <input type="text" class="form-control" id="startfrom" placeholder="Barrio Los Angeles, Ciudad Quesada">
-                    <label for="description" class="form-label">Descripción</label>
+                    <label for="startfrom" class="form-label">Starting Point</label>
+                    <input type="text" class="form-control" id="startfrom"
+                        placeholder="Barrio Los Angeles, Ciudad Quesada">
+                    <label for="description" class="form-label">Description</label>
                     <div class="description">
-                        <textarea id="description" placeholder="This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building"></textarea>
-                        <h3>Cuando</h3>
+                        <textarea id="description"
+                            placeholder="This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building"></textarea>
+                        <h3 class="schedule-label">When</h3>
                         <div class="row align-items-start ml-3">
                             <div class="col">
-                                <label for="departure" class="form-label">Hora de Salida</label>
+                                <label for="departure" class="form-label">Departure Time</label>
                                 <input type="time" class="form-control" id="departure" value="06:45">
-                                <label for="arrival" class="form-label">Hora Estimada de Llegada</label>
+                                <label for="arrival" class="form-label">Estimated Arrival Time</label>
                                 <input type="time" class="form-control" id="arrival" value="07:05">
-                                <a href="dashboard.html" class="cancel">Cancelar</a>
+                                <a class="cancel" href="dashboard.html">Cancel</a>
                             </div>
                             <div class="col">
-                                <label for="days" class="form-label">Seleccione los Dias</label>
+                                <label for="days" class="form-label">Select Days</label>
                                 <div id="days">
                                     <input type="checkbox" id="monday" name="day" value="Monday">
                                     <label for="monday">Monday</label><br>
@@ -77,7 +80,7 @@
                                     <label for="saturday">Saturday</label><br>
                                     <input type="checkbox" id="sunday" name="day" value="Sunday">
                                     <label for="sunday">Sunday</label><br>
-                                    <button class="save">Guardar</button>
+                                    <button class="save">Save</button>
                                 </div>
                             </div>
                         </div>
@@ -87,11 +90,16 @@
         </div>
     </div>
 
+    <!-- JavaScript to update the welcome message with the username from login -->
     <script>
-        // JavaScript function to allow only letters in the ride name input field
-        document.getElementById("ridename").addEventListener("input", function() {
-            // Remove non-letter characters
-            this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
+        document.addEventListener("DOMContentLoaded", function () {
+            const userLink = document.getElementById("userLink");
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get('username_login');
+
+            if (username) {
+                userLink.textContent = username;
+            }
         });
     </script>
 </body>
