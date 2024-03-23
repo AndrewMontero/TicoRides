@@ -21,7 +21,7 @@
             <button type="submit">INICIAR SESIÓN</button> <!-- Changed button text -->
         </form>
         <p>¿No tienes una cuenta? <a href="user_register.html">Registrarse aquí</a></p> <!-- Link to redirect to the second code -->
-    </div>
+    </div> 
 
     <script>
         function validateFormAndRedirect() {
@@ -39,6 +39,9 @@
                 alert("Password must be at least 8 characters long.");
                 return false; // Prevent form submission
             }
+
+            // Store username in localStorage
+            localStorage.setItem("username", username);
 
             // Allow form submission
             return true;
